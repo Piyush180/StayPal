@@ -1,5 +1,5 @@
-import type { RegisterFormData } from "./pages/Register";
-import type { SignInFormData } from "./pages/SignIn";
+import { RegisterFormData } from "./pages/Register";
+import { SignInFormData } from "./pages/SignIn";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
@@ -14,7 +14,6 @@ export const register = async (formData: RegisterFormData) => {
   });
 
   const responseBody = await response.json();
-
   if (!response.ok) {
     throw new Error(responseBody.message);
   }
@@ -37,6 +36,7 @@ export const signIn = async (formData: SignInFormData) => {
   return body;
 };
 
+
 export const validateToken = async () => {
   const response = await fetch(`${API_BASE_URL}/api/auth/validate-token`, {
     credentials: "include",
@@ -58,4 +58,18 @@ export const signOut = async () => {
   if (!response.ok) {
     throw new Error("Error during sign out");
   }
+};
+
+export const addMyHotel= async (hotelFormData: FormData) => {
+  const response = await fetch(`${API_BASE_URL}/api/my-hotels`, {
+    method: "POST",
+    credentials: "include",
+    body: hotelFormData,
+  });
+
+  if(!response.ok){
+    throw new Error("Failed to add hotel");
+  }
+
+  return response.json();
 };
