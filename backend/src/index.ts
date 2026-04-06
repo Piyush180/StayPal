@@ -7,6 +7,7 @@ import authRoutes from "./routes/auth";
 import myHotelRoutes from "./routes/my-hotels"
 import cookieParser from "cookie-parser";
 import { v2 as cloudinary } from 'cloudinary';
+import hotelRoutes from "./routes/hotels"
 import path from "path";
 
 
@@ -31,6 +32,7 @@ app.use(cors({
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/my-hotels", myHotelRoutes);
+app.use("/api/hotels", hotelRoutes);
 
 // app.get("*", (req: Request, res: Response) => {
 //     res.sendFile(path.join(__dirname, "../../frontend/dist/index.html"));

@@ -9,7 +9,7 @@ const MyHotels = () => {
     "fetchMyHotels",
     apiClient.fetchMyHotels,
     {
-      onError: () => {},
+      onError: () => { },
     }
   );
 
@@ -30,7 +30,7 @@ const MyHotels = () => {
       </span>
       <div className="grid grid-cols-1 gap-8">
         {hotelData.map((hotel) => (
-          <div
+          <div key={hotel._id}
             data-testid="hotel-card"
             className="flex flex-col justify-between border border-slate-300 rounded-lg p-8 gap-5"
           >

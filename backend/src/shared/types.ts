@@ -37,14 +37,14 @@ export type UserType = {
     totalCost: number;
   };
   
-//   export type HotelSearchResponse = {
-//     data: HotelType[];
-//     pagination: {
-//       total: number;
-//       page: number;
-//       pages: number;
-//     };
-//   };
+  export type HotelSearchResponse = {
+    data: HotelType[];
+    pagination: {
+      total: number;
+      page: number;
+      pages: number;
+    };
+  };
   
 //   export type PaymentIntentResponse = {
 //     paymentIntentId: string;
