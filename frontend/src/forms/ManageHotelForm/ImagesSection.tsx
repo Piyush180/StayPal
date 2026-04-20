@@ -41,7 +41,7 @@ const ImagesSection = () => {
               </div>
             ))}
           </div>
-        )}
+        )}  
 
         <input
           type="file"
