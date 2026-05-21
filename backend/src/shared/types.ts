@@ -46,8 +46,8 @@ export type UserType = {
     };
   };
   
-//   export type PaymentIntentResponse = {
-//     paymentIntentId: string;
-//     clientSecret: string;
-//     totalCost: number;
-//   };
+  export type PaymentIntentResponse = {
+    paymentIntentId: string;
+    clientSecret: string;
+    totalCost: number;
+  };
